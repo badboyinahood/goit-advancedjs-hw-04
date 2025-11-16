@@ -1,14 +1,18 @@
-import { defineConfig } from 'vite';
+import { defineConfig } from "vite";
 
 export default defineConfig({
-  root: 'src',
-
+  root: "src",
+  base: "/goit-advancedjs-hw-04/",
   build: {
-    outDir: '../dist',
+    outDir: "../dist",
     emptyOutDir: true,
+    rollupOptions: {
+    }
   },
-
+  optimizeDeps: {
+    include: ["simplelightbox"]
+  },
   define: {
-    global: 'window',
-  },
+    global: "window"
+  }
 });

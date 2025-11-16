@@ -2,12 +2,11 @@ name: Build and Deploy
 
 on:
   push:
-    branches: [main]
+    branches: [ main ]
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -18,8 +17,8 @@ jobs:
           node-version: 20
           cache: npm
 
-      - name: Clean install (fix Rollup optional deps)
-        run: npm ci --prefer-offline --no-audit
+      - name: Install dependencies
+        run: npm ci
 
       - name: Build project
         run: npm run build
