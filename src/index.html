@@ -1,22 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script>
+      window.global = window;
+    </script>
+
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>Image Search</title>
+
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
+
   <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
+    <header class="header">
+      <div class="container">
+        <form class="form search-form" id="search-form" autocomplete="off">
+          <input
+            class="form__input search-input"
+            type="text"
+            name="query"
+            placeholder="Search images..."
+          />
+          <button class="search-btn" type="submit">Search</button>
+        </form>
+      </div>
+    </header>
 
     <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
-    </main>
+      <div class="container">
+        <ul class="gallery"></ul>
 
-    <load src="./partials/footer.html" />
+        <!-- Кнопка Load More -->
+        <button id="load-more" class="load-more hidden">
+          Load more
+        </button>
+
+        <!-- Loader — по ТЗ он должен быть ПОД Load more -->
+        <span id="loader" class="loader hidden" aria-live="polite">
+          Loading…
+        </span>
+      </div>
+    </main>
 
     <script type="module" src="./main.js"></script>
   </body>
