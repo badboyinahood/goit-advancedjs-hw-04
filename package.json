@@ -12,7 +12,8 @@
     "vite": "^5.4.6"
   },
   "dependencies": {
-    "flatpickr": "^4.6.13",
+    "axios": "^1.6.0",
+    "simplelightbox": "2.14.1",
     "izitoast": "^1.4.0"
   }
 }
