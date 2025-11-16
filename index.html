@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      window.global = window;
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Search</title>
+
+    <script type="module" crossorigin src="/goit-advancedjs-hw-04/assets/index-BBOa-W3Z.js"></script>
+    <link rel="stylesheet" crossorigin href="/goit-advancedjs-hw-04/assets/index-CUQOSPbE.css">
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <form class="form search-form" id="search-form" autocomplete="off">
+          <input
+            class="form__input search-input"
+            type="text"
+            name="query"
+            placeholder="Search images..."
+          />
+          <button class="search-btn" type="submit">Search</button>
+        </form>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <ul class="gallery"></ul>
+
+        <!-- Кнопка Load More -->
+        <button id="load-more" class="load-more hidden">
+          Load more
+        </button>
+
+        <!-- Loader — по ТЗ он должен быть ПОД Load more -->
+        <span id="loader" class="loader hidden" aria-live="polite">
+          Loading…
+        </span>
+      </div>
+    </main>
+
+  </body>
+</html>
